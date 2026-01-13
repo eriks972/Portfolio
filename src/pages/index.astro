@@ -1,16 +1,54 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TestCard from "../components/TestCard.svelte";
+import FeaturedProjects from "../components/FeaturedProjects.svelte";
+import { projects } from "../data/projects";
+import '../styles/global.css' 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Erik Swanson | Full-Stack Developer">
+  <section class="py-24">
+    <div class="max-w-3xl">
+      <!-- Eyebrow -->
+      <p class="text-sm font-medium text-gray-500 mb-4">
+        Full-Stack Software Developer
+      </p>
+
+      <!-- Main headline -->
+      <h1 class="text-5xl sm:text-6xl font-bold tracking-tight leading-tight mb-6">
+        I build data-driven web applications
+      </h1>
+
+      <!-- Subheading -->
+      <p class="text-lg text-gray-600 mb-10">
+        I specialize in full-stack development using modern frameworks like
+        React, Next.js, Astro, and Svelte — with a strong focus on performance,
+        clean architecture, and real-world data.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex gap-4">
+        <a
+          href="/projects"
+          class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gray-900 text-white font-medium hover:bg-gray-800 transition"
+        >
+          View Projects
+        </a>
+
+        <a
+          href="https://github.com/"
+          target="_blank"
+          class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-gray-300 font-medium hover:border-gray-500 transition"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+  	<FeaturedProjects projects={projects} client:load />
+  </section>
+</BaseLayout>
+
+

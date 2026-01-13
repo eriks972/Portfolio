@@ -1,0 +1,37 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import '../styles/global.css' 
+const { title = "Erik Swanson | Developer" } = Astro.props;
+---
+<script is:inline>
+  const theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="/favicon.ico" />
+    <!-- PNG fallbacks -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>{title}</title>
+    
+  </head>
+  <body class="text-gray-900 antialiased">
+  <Navbar />
+  <main class="max-w-6xl mx-auto px-6 py-12 min-h-[70vh]">
+    <slot />
+  </main>
+  <Footer />
+</body>
+</html>

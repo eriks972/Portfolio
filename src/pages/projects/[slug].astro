@@ -1,0 +1,157 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { projects } from "../../data/projects";
+
+export async function getStaticPaths() {
+  return projects.map(project => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+---
+
+<BaseLayout title={project.title}>
+  <!-- Header -->
+  <section class="mb-16">
+    <p class="text-sm text-gray-500 mb-2">
+      {project.category}
+    </p>
+
+    <h1 class="text-4xl font-bold mb-4">
+      {project.title}
+    </h1>
+
+    <p class="text-lg text-gray-600 max-w-3xl">
+      {project.description}
+    </p>
+  </section>
+
+  <!-- Actions -->
+  <section class="flex gap-4 mb-16">
+    {project.links.live && (
+      <a
+        href={project.links.live}
+        target="_blank"
+        class="px-5 py-2.5 rounded-lg bg-gray-900 text-white font-medium hover:bg-gray-800 transition"
+      >
+        Live Demo
+      </a>
+    )}
+
+    {project.links.github && (
+      <a
+        href={project.links.github}
+        target="_blank"
+        class="px-5 py-2.5 rounded-lg border border-gray-300 font-medium hover:border-gray-500 transition"
+      >
+        GitHub
+      </a>
+    )}
+  </section>
+
+  <!-- Tech Stack -->
+  <section class="mb-16">
+    <h2 class="text-xl font-semibold mb-4">
+      Tech Stack
+    </h2>
+
+    <div class="flex flex-wrap gap-2">
+      {project.tech.map(item => (
+        <span class="px-3 py-1 rounded-full text-sm border border-gray-300">
+          {item}
+        </span>
+      ))}
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="mb-16 max-w-3xl">
+    <h2 class="text-xl font-semibold mb-4">
+      Key Highlights
+    </h2>
+
+    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+      {project.highlights.map(point => (
+        <li>{point}</li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="mb-16 max-w-3xl">
+    <h2 class="text-xl font-semibold mb-4">
+      Architecture and Data
+    </h2>
+
+    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+      {project.architecture.map(data => (
+        <li>{data}</li>
+      ))}
+    </ul>
+
+  </section>
+
+  <section class="mb-16 max-w-3xl">
+    <h2 class="text-xl font-semibold mb-4">
+      Problem and Solution
+    </h2>
+
+    <h3 class="text-xl font-semibold mb-4">Problem</h3>
+    <p>{project.problem}</p>
+    <br>
+    <h3 class="text-xl font-semibold mb-4">Solution</h3>
+    <p>{project.solution}</p>
+  </section>
+
+  <section class="mb-16 max-w-3xl">
+    <h2 class="text-xl font-semibold mb-4">
+      What's next for this project
+    </h2>
+
+    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+      {project.whatsNext.map(next => (
+        <li>{next}</li>
+      ))}
+    </ul>
+
+  </section>
+
+<section class="mt-12">
+  <h2 class="text-xl font-semibold mb-4">Screenshots</h2>
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {project.images.map((src, index) => (
+      <figure class="rounded-lg overflow-hidden border transition-transform hover:scale-[1.02] hover:shadow-md">
+        <img
+          src={src}
+          alt={project.captions?.[index] ?? "Project screenshot"}
+          loading="lazy"
+          class="w-full h-auto"
+        />
+
+        {project.captions?.[index] && (
+          <figcaption class="text-sm text-gray-500 mt-2 text-center px-2">
+            {project.captions[index]}
+          </figcaption>
+        )}
+      </figure>
+    ))}
+  </div>
+</section>
+
+
+
+<br>
+  <!-- Back link -->
+  <a
+    href="/projects"
+    class="text-sm font-medium text-gray-600 hover:text-gray-900 transition"
+  >
+    ← Back to projects
+  </a>
+</BaseLayout>
+
+
+
+

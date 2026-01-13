@@ -1,0 +1,113 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="About | Erik Swanson">
+  <section class="max-w-3xl">
+    <!-- Intro -->
+    <h1 class="text-4xl font-bold mb-6">
+      About Me
+    </h1>
+
+    <p class="text-lg text-gray-600 mb-10">
+      I’m a full-stack software developer with a strong focus on building
+      data-driven web applications and scalable systems. I enjoy working across
+      the stack — from backend data modeling and APIs to frontend architecture
+      and performance-focused UI.
+    </p>
+
+    <!-- What I Do -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">
+        What I Do
+      </h2>
+
+      <p class="text-gray-700 mb-4">
+        Most of my work centers around designing and building applications that
+        help users make better decisions using real-world data. I’ve worked on
+        projects involving analytics platforms, dashboards, internal tools, and
+        full-stack consumer applications.
+      </p>
+
+      <p class="text-gray-700">
+        I’m particularly interested in clean architecture, performance, and
+        choosing the right tools for the problem — whether that’s React and
+        Next.js, Astro and Svelte, or backend systems built with Node, PHP, or
+        Python.
+      </p>
+    </section>
+
+    <!-- How I Think -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">
+        How I Think About Software
+      </h2>
+
+      <ul class="list-disc pl-5 space-y-3 text-gray-700">
+        <li>
+          I prioritize clarity and maintainability over clever abstractions.
+        </li>
+        <li>
+          I design systems to scale incrementally rather than over-engineering
+          upfront.
+        </li>
+        <li>
+          I value performance and user experience, especially in data-heavy
+          applications.
+        </li>
+        <li>
+          I enjoy learning new frameworks and understanding why they exist —
+          not just how to use them.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Tech Snapshot -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">
+        Tech Snapshot
+      </h2>
+
+      <div class="flex flex-wrap gap-2">
+        {[
+          "React",
+          "Next.js",
+          "Astro",
+          "Svelte",
+          "Node.js",
+          "Laravel",
+          "MongoDB",
+          "MySQL",
+          "D3.js",
+          "Python"
+        ].map(tech => (
+          <span class="px-3 py-1 rounded-full text-sm border border-gray-300">
+            {tech}
+          </span>
+        ))}
+      </div>
+    </section>
+
+    <!-- What I'm Looking For -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">
+        What I’m Looking For
+      </h2>
+
+      <p class="text-gray-700 mb-6">
+        I’m interested in roles where I can contribute to meaningful products,
+        work with thoughtful engineers, and continue growing as a full-stack
+        developer. I enjoy environments that value collaboration, ownership,
+        and well-reasoned technical decisions.
+      </p>
+
+      <a
+        href="/projects"
+        class="inline-flex items-center px-5 py-2.5 rounded-lg bg-gray-900 text-white font-medium hover:bg-gray-800 transition"
+      >
+        View My Work
+      </a>
+    </section>
+  </section>
+</BaseLayout>
+

@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectGrid from "../../components/ProjectGrid.svelte";
+import { projects } from "../../data/projects";
+---
+
+<BaseLayout title="Projects">
+  <h1 class="text-3xl font-bold mb-8">Projects</h1>
+
+ <ProjectGrid projects={projects} client:load />
+</BaseLayout>
+
+
