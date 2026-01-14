@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TestCard from "../components/TestCard.svelte";
 import FeaturedProjects from "../components/FeaturedProjects.svelte";
+import ContactForm from "../components/ContactForm.svelte";
 import { projects } from "../data/projects";
 import '../styles/global.css' 
 ---
@@ -60,9 +61,12 @@ import '../styles/global.css'
   </div>
 </section>
 
-  <section class="max-w-7xl mx-auto px-6">
-  	<FeaturedProjects projects={projects} client:load />
-  </section>
+<section class="max-w-7xl mx-auto px-6">
+  <FeaturedProjects projects={projects} client:load />
+</section>
+
+<ContactForm />
+
 </BaseLayout>
 
 

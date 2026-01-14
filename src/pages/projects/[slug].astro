@@ -13,6 +13,8 @@ const { project } = Astro.props;
 ---
 
 <BaseLayout title={project.title}>
+  <div class="max-w-7xl mx-auto px-6">
+  <br>
   <!-- Header -->
   <section class="mb-16">
     <p class="text-sm text-gray-500 mb-2">
@@ -140,8 +142,6 @@ const { project } = Astro.props;
   </div>
 </section>
 
-
-
 <br>
   <!-- Back link -->
   <a
@@ -150,6 +150,8 @@ const { project } = Astro.props;
   >
     ← Back to projects
   </a>
+
+</div>
 </BaseLayout>
 
 

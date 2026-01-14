@@ -2,12 +2,18 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectGrid from "../../components/ProjectGrid.svelte";
 import { projects } from "../../data/projects";
+import ContactForm from "../../components/ContactForm.svelte";
 ---
 
 <BaseLayout title="Projects">
-  <h1 class="text-3xl font-bold mb-8">Projects</h1>
-
- <ProjectGrid projects={projects} client:load />
+  <br>
+  <div class="max-w-7xl mx-auto px-6">
+    <h1 class="text-3xl font-bold mb-8">Projects</h1>
+    <ProjectGrid projects={projects} client:load />
+    <br>
+    <hr>
+    <ContactForm />
+  </div>
 </BaseLayout>
 
 

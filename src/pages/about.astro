@@ -1,8 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.svelte";
 ---
 
 <BaseLayout title="About | Erik Swanson">
+  <br>
+  <div class="max-w-7xl mx-auto px-6">
   <section class="max-w-3xl">
     <!-- Intro -->
     <h1 class="text-4xl font-bold mb-6">
@@ -109,5 +112,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </a>
     </section>
   </section>
+  <br>
+  <hr>
+  </div>
+  <ContactForm />
 </BaseLayout>
 
