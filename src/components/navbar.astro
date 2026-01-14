@@ -2,7 +2,8 @@
 const links = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
-  { href: "/about", label: "About" }
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact"}
 ];
 ---
 
@@ -15,25 +16,22 @@ const links = [
     </a>
 
     <!-- Navigation -->
-    <nav class="flex gap-6 text-sm">
-      {links.map(link => (
-        <a
-          href={link.href}
-          class="text-gray-600 hover:text-gray-900 transition"
-        >
-          {link.label}
-        </a>
-      ))}
-    </nav>
-
-<script is:inline>
-  const btn = document.getElementById("theme-toggle");
-
-  btn?.addEventListener("click", () => {
-    const root = document.documentElement;
-    const isDark = root.classList.toggle("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  });
-</script>
+    <nav class="flex items-center gap-6">
+        {links.map(link => (
+          <a
+            href={link.href}
+            class="text-gray-600 hover:text-gray-900 transition"
+          >
+            {link.label}
+          </a>
+        ))}
+      <a
+        href="../files/Erik_Swanson_Resume.pdf"
+        Download
+        class="px-6 py-3 rounded-lg bg-gray-900 text-white font-medium"
+      >
+        Download Resume
+      </a>
   </div>
+    </nav>
 </header>
