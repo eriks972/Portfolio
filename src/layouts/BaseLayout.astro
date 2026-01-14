@@ -2,6 +2,7 @@
 import Navbar from "../components/navbar.astro";
 import Footer from "../components/footer.astro";
 import '../styles/global.css' 
+import Analytics from '@vercel/analytics/astro'
 const { title = "Erik Swanson | Developer" } = Astro.props;
 ---
 <script is:inline>
@@ -10,7 +11,7 @@ const { title = "Erik Swanson | Developer" } = Astro.props;
     document.documentElement.classList.add("dark");
   }
 </script>
-
+<Analytics/>
 <!DOCTYPE html>
 <html lang="en">
   <head>
