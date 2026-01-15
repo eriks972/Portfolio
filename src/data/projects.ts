@@ -27,7 +27,8 @@ export const projects = [
       "Incorporate additional datasets such as climate and employment statistics",
       "Enhance visualizations with predictive analytics and trend analysis",
       "Implement user accounts for saving favorite locations and custom comparisons"
-    ]
+    ],
+    githubRepo: "eriks972/waylaytics"
 
   },
   {
@@ -53,7 +54,8 @@ export const projects = [
       "Developed a React frontend with ingredient-based filtering and meal planning features"],
     images: ["/screenshots/tastetrack/Home.png", "/screenshots/tastetrack/RecipeSearch.png", "/screenshots/tastetrack/MealPlanner.png"],
     captions:["Home Page","Recipe Search with Ingredient Filtering","Meal Planner View"],
-    whatsNext: ["Launch it using a provider so we can use it live!"]
+    whatsNext: ["Launch it using a provider so we can use it live!"],
+    githubRepo: "eriks972/TasteTrack"
   },
   {
     slug: "laravel-dashboard",
@@ -80,7 +82,8 @@ export const projects = [
     captions:["Login Page","Admin Dashboard Overview","Reporting Section"],
     whatsNext: ["Add more third-party integrations for expanded functionality",
       "Enhance reporting features with data visualization tools",
-      "Implement user activity tracking and audit logs"]
+      "Implement user activity tracking and audit logs"],
+    githubRepo: ""
   },
   {
   slug: "sports-info-api",
@@ -119,7 +122,8 @@ export const projects = [
     "Improve NLP accuracy with expanded training data",
     "Add support for additional sports leagues",
     "Expose the system through a public API or frontend interface"
-  ]
+  ],
+  githubRepo: "eriks972/SportsInfoAPI"
   
 }, 
 {
@@ -161,7 +165,8 @@ export const projects = [
     "Add user reviews and ratings",
     "Improve product filtering and search",
     "Introduce API integrations for live product data"
-  ]
+  ],
+  githubRepo: "eriks972/OrganicFinds"
 },
 {
   slug: "chromaforge",
@@ -200,7 +205,8 @@ export const projects = [
     "Build Create Palette form and validation",
     "Implement user authentication and profiles",
     "Add palette export options for CSS, Tailwind, and JSON"
-  ]
+  ],
+  githubRepo: "eriks972/ChromaForge"
 },
 
 {
@@ -219,6 +225,7 @@ export const projects = [
     live: "eriktswanson.dev",
     github: "https://github.com/eriks972/Portfolio"
   },
+  githubRepo: "eriks972/Portfolio",
   problem:
     "Many developer portfolios lack depth, context, or clarity, making it difficult for hiring managers to understand the impact of individual projects.",
   solution:

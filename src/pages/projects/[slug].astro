@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { projects } from "../../data/projects";
+import { getLastCommitDate } from "../../lib/github";
 
 export async function getStaticPaths() {
   return projects.map(project => ({
@@ -10,6 +11,12 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
+
+let lastUpdated = null;
+
+if (project?.githubRepo) {
+  lastUpdated = await getLastCommitDate(project.githubRepo);
+}
 ---
 
 <BaseLayout title={project.title}>
@@ -51,7 +58,24 @@ const { project } = Astro.props;
         GitHub
       </a>
     )}
+    
   </section>
+
+  <section flex gap-4 mb-16 >
+
+  {lastUpdated && (
+  <p class="text-sm text-gray-500 mt-2">
+    Last updated on{" "}
+    {new Date(lastUpdated).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric"
+    })}
+  </p>
+)}
+
+  </section>
+  <br>
 
   <!-- Tech Stack -->
   <section class="mb-16">
