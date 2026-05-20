@@ -250,6 +250,56 @@ export const projects = [
     "Introduce project filtering and search",
     "Integrate analytics for user interaction insights"
   ]
+},
+
+{
+  slug: "nba-team-efficiency-player-dependency-analytics",
+  title: "NBA Team Efficiency & Player Dependency Analytics",
+  category: "Data Analytics / Sports Analytics",
+  description:
+    "An end-to-end NBA analytics project that uses SportsDataverse, Python, pandas, and Tableau Public to analyze team efficiency, roster dependency, and player production across a partial 2025 regular-season dataset.",
+  featured: true,
+  tech: ["Python", "pandas", "SportsDataverse", "Tableau Public", "CSV Data Marts", "GitHub"],
+  highlights: [
+    "Built a Python analytics pipeline to ingest, clean, and transform NBA schedule and player box score data",
+    "Created fact tables and dashboard-ready marts for team efficiency, player production, and roster dependency analysis",
+    "Published an interactive Tableau Public dashboard showing team rankings, star dependency, and top player-team production scores"
+  ],
+  links: {
+    live: "https://public.tableau.com/views/Book1_17791316257620/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    github: "https://github.com/eriks972/NBA-Data"
+  },
+  githubRepo: "eriks972/NBA-Data",
+  problem:
+    "Sports data projects often stop at basic stat tables or visualizations, making it difficult to evaluate how team performance, roster balance, and player production connect to one another. The raw SportsDataverse NBA data also required cleaning, filtering, and validation before it could support reliable dashboard analysis.",
+  solution:
+    "This project was built as a sports analytics pipeline that transforms raw NBA data into structured fact tables and analytics marts. The final Tableau dashboard allows users to compare team efficiency, star dependency, roster balance, and player-team production through interactive visualizations.",
+  architecture: [
+    "SportsDataverse used to collect NBA schedule, play-by-play, and player box score data",
+    "Python and pandas used to clean raw CSV files, standardize team names, remove non-regular-season games, and create reusable analysis tables",
+    "Fact tables created for games and player game statistics to support team-level and player-level analysis",
+    "Analytics marts created for team efficiency, player value, star dependency, and dashboard summary reporting",
+    "Tableau Public used to build and publish the final interactive sports analytics dashboard"
+  ],
+  images: [
+    "/screenshots/nba-analytics/Dashboard.png",
+    "/screenshots/nba-analytics/TeamRanking.png",
+    "/screenshots/nba-analytics/EfficiencyDependency.png",
+    "/screenshots/nba-analytics/PlayerProduction.png"
+  ],
+  captions: [
+    "NBA Analytics Dashboard Overview",
+    "Overall Team Analytics Ranking",
+    "Team Efficiency vs Star Dependency",
+    "Top 25 Player-Team Production Scores"
+  ],
+  whatsNext: [
+    "Replace the partial SportsDataverse dataset with a complete NBA regular-season source",
+    "Move the CSV-based pipeline into Snowflake and dbt for a more production-style analytics workflow",
+    "Create a true player-season mart to combine traded players into one season-level record",
+    "Add advanced player value metrics, salary data, and contract efficiency analysis",
+    "Expand the dashboard with team filters, player comparison views, and season-over-season trends"
+  ]
 }
 
 ];
