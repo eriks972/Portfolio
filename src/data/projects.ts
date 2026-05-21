@@ -300,6 +300,72 @@ export const projects = [
     "Add advanced player value metrics, salary data, and contract efficiency analysis",
     "Expand the dashboard with team filters, player comparison views, and season-over-season trends"
   ]
+},
+
+{
+  slug: "biasslayers-news-bias-detection-system",
+  title: "BiasSlayers News Bias & Credibility Detection System",
+  category: "NLP / Full Stack / Machine Learning",
+  description:
+    "A full-stack NLP application that analyzes news articles for credibility, political bias, and tone using transformer-based models, a Flask API, and a user-facing web interface.",
+  featured: true,
+  tech: [
+    "Python",
+    "Flask",
+    "Hugging Face Transformers",
+    "BERT",
+    "RoBERTa",
+    "PyTorch",
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Hugging Face Spaces",
+    "GitHub"
+  ],
+  highlights: [
+    "Built a multi-model NLP pipeline that classifies news content as real or fake, left/neutral/right bias, and emotional tone",
+    "Trained and evaluated transformer-based classifiers using datasets such as LIAR, FakeNewsNet, SemEval-style sentiment data, and a custom bias dataset",
+    "Deployed a Flask prediction API to Hugging Face Spaces and connected it to a frontend dashboard for live article analysis"
+  ],
+  links: {
+    live: "https://eriks972-biasslayers.hf.space",
+    github: "https://github.com/eriks972/BiasSlayers"
+  },
+  githubRepo: "eriks972/BiasSlayers",
+  problem:
+    "News readers often struggle to quickly evaluate whether an article is credible, politically biased, or emotionally framed. Many existing tools focus on only one of these tasks, such as fake news detection or sentiment analysis, rather than combining multiple perspectives into one explainable system.",
+  solution:
+    "BiasSlayers was built as a multi-task NLP system that analyzes article text through separate transformer-based models for credibility, bias, and tone. The system returns confidence scores, prediction labels, and supporting explanation features such as keywords, entities, and loaded language indicators to help users understand why the model made its prediction.",
+  architecture: [
+    "Article text or URL submitted through the frontend interface or API endpoint",
+    "Flask backend extracts, cleans, and prepares article text for model inference",
+    "Transformer tokenizers convert cleaned text into model-ready input tensors",
+    "Validity classifier predicts whether the article appears real or fake",
+    "Bias classifier predicts political framing as left, neutral, or right",
+    "Tone analyzer identifies the emotional or stylistic tone of the article",
+    "Prediction results are combined into a structured API response with labels, confidence scores, probabilities, and explanation features",
+    "Next.js frontend displays the results in a user-facing dashboard for live demos and article analysis"
+  ],
+  images: [
+    // "/screenshots/biasslayers/Dashboard.png",
+    // "/screenshots/biasslayers/PredictionResults.png",
+    // "/screenshots/biasslayers/APIResponse.png",
+    // "/screenshots/biasslayers/ModelPipeline.png"
+  ],
+  captions: [
+    "BiasSlayers Dashboard Overview",
+    "Article Credibility, Bias, and Tone Results",
+    "Structured API Prediction Response",
+    "Multi-Model NLP Pipeline"
+  ],
+  whatsNext: [
+    "Improve the bias dataset with a larger and more balanced collection of articles across political perspectives",
+    "Add stronger explainability features using attention visualization, phrase-level highlighting, or SHAP-style analysis",
+    "Expand URL extraction support for more article sources and improve handling of paywalls or blocked content",
+    "Add user feedback so predictions can be reviewed and used to improve future model behavior",
+    "Create a model comparison page showing performance metrics, confusion matrices, and examples of correct and incorrect predictions",
+    "Deploy the frontend and backend as a more polished public demo with better error handling and loading states"
+  ]
 }
 
 ];
