@@ -281,12 +281,12 @@ export const projects = [
     "Analytics marts created for team efficiency, player value, star dependency, and dashboard summary reporting",
     "Tableau Public used to build and publish the final interactive sports analytics dashboard"
   ],
-  // images: [
-  //   "/screenshots/nba-analytics/Dashboard.png",
-  //   "/screenshots/nba-analytics/TeamRanking.png",
-  //   "/screenshots/nba-analytics/EfficiencyDependency.png",
-  //   "/screenshots/nba-analytics/PlayerProduction.png"
-  // ],
+  images: [
+    // "/screenshots/nba-analytics/Dashboard.png",
+    // "/screenshots/nba-analytics/TeamRanking.png",
+    // "/screenshots/nba-analytics/EfficiencyDependency.png",
+    // "/screenshots/nba-analytics/PlayerProduction.png"
+  ],
   captions: [
     "NBA Analytics Dashboard Overview",
     "Overall Team Analytics Ranking",
