@@ -328,7 +328,7 @@ export const projects = [
     "Deployed a Flask prediction API to Hugging Face Spaces and connected it to a frontend dashboard for live article analysis"
   ],
   links: {
-    live: "https://eriks972-biasslayers.hf.space",
+    live: "https://bias-slayers.vercel.app/",
     github: "https://github.com/eriks972/BiasSlayers"
   },
   githubRepo: "eriks972/BiasSlayers",
