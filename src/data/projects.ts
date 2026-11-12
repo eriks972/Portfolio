@@ -366,6 +366,81 @@ export const projects = [
     "Create a model comparison page showing performance metrics, confusion matrices, and examples of correct and incorrect predictions",
     "Deploy the frontend and backend as a more polished public demo with better error handling and loading states"
   ]
+},
+{
+  slug: "gamepulse-sports-analytics-platform",
+  title: "GamePulse Sports Analytics Platform",
+  category: "Full Stack / Sports Analytics / Data Engineering",
+  description:
+    "A full-stack sports analytics platform for exploring NBA, WNBA, NFL, MLB, NHL, and MLS data through interactive dashboards, player profiles, team statistics, historical comparisons, and game breakdowns.",
+  featured: true,
+  tech: [
+    "C#",
+    "ASP.NET Core",
+    "REST APIs",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Recharts",
+    "Python",
+    "pandas",
+    "Docker",
+    "Vercel",
+    "Render",
+    "Jest",
+    "React Testing Library",
+    "GitHub"
+  ],
+  highlights: [
+    "Built a multi-league analytics platform with league-specific statistics, player profiles, team views, and historical season exploration",
+    "Developed Python data pipelines to collect, validate, and transform sports datasets into structured data served through an ASP.NET Core API",
+    "Created responsive interfaces with interactive charts, searchable player views, statistical tables, and regular-season and postseason filters",
+    "Handled incomplete historical datasets with clear availability messages and fallbacks that preserve the distinction between missing statistics and zero values",
+    "Deployed the Next.js frontend to Vercel and a Dockerized ASP.NET Core backend to Render, with automated frontend tests for navigation, filtering, and data presentation"
+  ],
+  links: {
+    live: "https://game-pulse-steel.vercel.app/",
+    github: "https://github.com/eriks972/GamePulse"
+  },
+  githubRepo: "eriks972/GamePulse",
+  problem:
+    "Sports statistics are spread across different sources, formats, and league-specific systems, making it difficult to explore historical performance through a consistent interface. Differences in statistical definitions, season structures, and historical coverage also make it challenging to combine these datasets without presenting misleading results.",
+  solution:
+    "GamePulse brings multiple sports into one analytics platform while preserving each league's statistical context. Python pipelines prepare historical datasets, an ASP.NET Core API exposes structured league data, and a Next.js frontend presents player profiles, team analytics, leaderboards, and game information. Season filters, responsive tables, interactive charts, and explicit data availability states help users explore performance and understand the limits of the underlying datasets.",
+  architecture: [
+    "Python pipelines collect historical sports data from source datasets and league-specific data libraries",
+    "Data preparation validates identifiers, normalizes records, and separates regular-season and postseason statistics where available",
+    "Processed datasets are exported into structured JSON files for backend consumption",
+    "An ASP.NET Core REST API provides endpoints for league, season, team, player, and game views",
+    "A Next.js and TypeScript frontend requests API data and applies view-specific search, filtering, and presentation logic",
+    "React components, Tailwind CSS, and Recharts render responsive dashboards, profiles, statistical tables, and visualizations",
+    "Loading, empty, error, and unavailable-data states communicate incomplete coverage and failed requests",
+    "The frontend runs on Vercel, while the Dockerized backend runs on Render",
+    "Jest and React Testing Library verify key interface behavior, including navigation, search, filters, and statistic formatting"
+  ],
+  images: [
+    "/screenshots/gamepulse/Home.png",
+    "/screenshots/gamepulse/Leagues.png",
+    "/screenshots/gamepulse/MLB.png",
+    "/screenshots/gamepulse/Players.png",
+    "/screenshots/gamepulse/Standings.png"
+  ],
+  captions: [
+    "GamePulse Multi-League Dashboard",
+    "Player Season Profile and Available Game Logs",
+    "Team Statistics and Historical Performance",
+    "Game Breakdown and Statistical Summary",
+    "League Leaderboards and Season Filters"
+  ],
+  whatsNext: [
+    "Expand historical coverage and improve validation across leagues, seasons, and source datasets",
+    "Automate incremental data refreshes with scheduled collection and validation workflows",
+    "Add deeper player and team comparison tools with league-specific metrics and visualizations",
+    "Publish data coverage summaries so users can see which statistics are available for each league and season",
+    "Improve API performance through caching and more targeted data loading",
+    "Expand automated coverage for historical edge cases, missing data, and cross-league navigation"
+  ]
 }
 
 ];
