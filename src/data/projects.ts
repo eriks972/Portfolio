@@ -347,10 +347,10 @@ export const projects = [
     "Next.js frontend displays the results in a user-facing dashboard for live demos and article analysis"
   ],
   images: [
-    "/screenshots/BiasSlayers/BasePage.png",
-    "/screenshots/BiasSlayers/Bias.png",
-    "/screenshots/BiasSlayers/Tone.png",
-    "/screenshots/BiasSlayers/Validity.png"
+    "/screenshots/BiasSlayer/BasePage.png",
+    "/screenshots/BiasSlayer/Bias.png",
+    "/screenshots/BiasSlayer/Tone.png",
+    "/screenshots/BiasSlayer/Validity.png"
   ],
   captions: [
     "BiasSlayers Base Page",
