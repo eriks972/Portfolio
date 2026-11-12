@@ -347,16 +347,16 @@ export const projects = [
     "Next.js frontend displays the results in a user-facing dashboard for live demos and article analysis"
   ],
   images: [
-    // "/screenshots/biasslayers/Dashboard.png",
-    // "/screenshots/biasslayers/PredictionResults.png",
-    // "/screenshots/biasslayers/APIResponse.png",
-    // "/screenshots/biasslayers/ModelPipeline.png"
+    "/screenshots/BiasSlayers/BasePage.png",
+    "/screenshots/BiasSlayers/Bias.png",
+    "/screenshots/BiasSlayers/Tone.png",
+    "/screenshots/BiasSlayers/Validity.png"
   ],
   captions: [
-    "BiasSlayers Dashboard Overview",
-    "Article Credibility, Bias, and Tone Results",
-    "Structured API Prediction Response",
-    "Multi-Model NLP Pipeline"
+    "BiasSlayers Base Page",
+    "BiasSlayers Bias Prediction View",
+    "BiasSlayers Tone Prediction View",
+    "BiasSlayers Validity Prediction View"
   ],
   whatsNext: [
     "Improve the bias dataset with a larger and more balanced collection of articles across political perspectives",
@@ -427,11 +427,11 @@ export const projects = [
     "/screenshots/gamepulse/Standings.png"
   ],
   captions: [
-    "GamePulse Multi-League Dashboard",
-    "Player Season Profile and Available Game Logs",
-    "Team Statistics and Historical Performance",
-    "Game Breakdown and Statistical Summary",
-    "League Leaderboards and Season Filters"
+    "GamePulse Home Page",
+    "GamePulse Leagues Page",
+    "GamePulse MLB Page",
+    "GamePulse Players Page",
+    "GamePulse Standings Page"
   ],
   whatsNext: [
     "Expand historical coverage and improve validation across leagues, seasons, and source datasets",
